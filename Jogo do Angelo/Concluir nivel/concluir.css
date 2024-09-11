@@ -1,0 +1,88 @@
+/* Reset básico de margens e preenchimentos, e define box-sizing para border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo */
+  background-color: #f4f4f9; /* Cor de fundo clara para a página */
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+}
+
+/* Contêiner principal para a área do próximo nível */
+.next-level-container {
+  display: flex; /* Usa Flexbox para organizar os itens dentro do contêiner */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 40px; /* Espaço entre os itens */
+  background-color: white; /* Cor de fundo do contêiner */
+  padding: 30px; /* Espaçamento interno do contêiner */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do contêiner */
+  max-width: 800px; /* Largura máxima do contêiner */
+}
+
+/* Contêiner para a imagem, evita que ela encolha */
+.image-container {
+  flex-shrink: 0; /* Impede que a imagem encolha quando a tela é pequena */
+}
+
+/* Estilo para a imagem do nível */
+.level-image {
+  max-width: 200px; /* Largura máxima da imagem */
+  border-radius: 10px; /* Cantos arredondados na imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor da imagem */
+}
+
+/* Contêiner para a descrição */
+.description-container {
+  max-width: 500px; /* Largura máxima para o contêiner da descrição */
+}
+
+/* Estilo para o título da descrição */
+h2 {
+  color: #4a90e2; /* Cor azul para o título */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Estilo para os parágrafos */
+p {
+  margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+  font-size: 16px; /* Tamanho da fonte dos parágrafos */
+  color: #333; /* Cor do texto */
+}
+
+/* Estilo para o botão de próximo nível */
+.next-button {
+  display: inline-block; /* Faz o link se comportar como um bloco inline, permitindo padding e margin */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  background-color: #4a90e2; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 5px; /* Cantos arredondados do botão */
+  font-size: 16px; /* Tamanho da fonte do botão */
+  transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
+}
+
+/* Estilo para o botão ao passar o mouse sobre ele */
+.next-button:hover {
+  background-color: #357ABD; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .next-level-container {
+      flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .image-container {
+      margin-bottom: 20px; /* Espaço abaixo da imagem em telas menores */
+  }
+}

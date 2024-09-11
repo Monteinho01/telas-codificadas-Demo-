@@ -1,0 +1,66 @@
+/* Reseta margens, preenchimentos e configura o box-sizing globalmente */
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove preenchimentos padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo da largura e altura dos elementos */
+}
+
+/* Estiliza o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão da página como Arial, com fallback para sans-serif */
+  background-color: #f4f4f9; /* Define a cor de fundo do corpo como um tom claro de cinza */
+  display: flex; /* Usa Flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+}
+
+/* Estiliza o container do menu */
+.menu-container {
+  text-align: center; /* Centraliza o texto dentro do container do menu */
+  background-color: white; /* Define a cor de fundo do container como branco */
+  padding: 30px; /* Adiciona preenchimento interno de 30px ao redor do conteúdo do container */
+  border-radius: 10px; /* Adiciona bordas arredondadas de 10px ao container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao container para criar um efeito de elevação */
+}
+
+/* Estiliza o título principal */
+h1 {
+  color: #4a90e2; /* Define a cor do título principal como azul */
+  margin-bottom: 40px; /* Adiciona uma margem inferior de 40px ao título para separá-lo dos botões */
+}
+
+/* Estiliza o container dos botões do menu */
+.buttons {
+  display: flex; /* Usa Flexbox para layout dos botões */
+  justify-content: space-around; /* Distribui os botões igualmente com espaço ao redor */
+}
+
+/* Estiliza os botões do menu */
+.menu-button {
+  display: block; /* Faz com que o botão ocupe toda a largura disponível */
+  background-color: #4a90e2; /* Define a cor de fundo dos botões como azul */
+  color: white; /* Define a cor do texto dos botões como branca */
+  padding: 20px 40px; /* Adiciona preenchimento interno de 20px verticalmente e 40px horizontalmente */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 20px; /* Define o tamanho da fonte dos botões como 20px */
+  border-radius: 5px; /* Adiciona bordas arredondadas de 5px aos botões */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo dos botões ao passar o mouse */
+}
+
+/* Estiliza o efeito hover dos botões */
+.menu-button:hover {
+  background-color: #357ABD; /* Altera a cor de fundo dos botões para um azul mais escuro ao passar o mouse */
+}
+
+/* Estiliza o efeito active dos botões */
+.menu-button:active {
+  background-color: #285A8B; /* Altera a cor de fundo dos botões para um azul ainda mais escuro quando pressionado */
+}
+
+/* Adiciona espaço entre botões adjacentes */
+.menu-button + .menu-button {
+  margin-left: 20px; /* Adiciona uma margem esquerda de 20px entre botões adjacentes */
+}
+
+  

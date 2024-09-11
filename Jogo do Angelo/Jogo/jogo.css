@@ -1,0 +1,141 @@
+/* Define regras padrão para todos os elementos */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura dos elementos */
+}
+
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte para o corpo da página */
+  background-color: #f4f4f9; /* Define a cor de fundo da página */
+  display: flex; /* Usa flexbox para o layout do corpo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+}
+
+/* Estilo para o contêiner principal do jogo */
+.game-container {
+  text-align: center; /* Alinha o texto ao centro dentro do contêiner */
+  background-color: white; /* Define a cor de fundo como branca */
+  padding: 30px; /* Adiciona um espaçamento interno de 30px ao redor do contêiner */
+  border-radius: 10px; /* Adiciona bordas arredondadas de 10px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao contêiner */
+  /* Aplica a animação fade-in ao contêiner do jogo */
+  animation: fadeIn 1s ease-in; /* Animação de fade-in que dura 1 segundo e usa um efeito de entrada suave */
+}
+
+/* Estilo para o título principal */
+h1 {
+  color: #4a90e2; /* Define a cor do texto como azul */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Estilo para a área do jogo */
+.game-area {
+  display: flex; /* Usa flexbox para o layout das imagens */
+  justify-content: center; /* Centraliza horizontalmente as imagens */
+  align-items: center; /* Centraliza verticalmente as imagens */
+  gap: 20px; /* Adiciona um espaço de 20px entre as imagens */
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+}
+
+/* Contêiner para cada imagem */
+.image-container {
+  position: relative; /* Define a posição como relativa para permitir posicionamento absoluto dos elementos filhos, se necessário */
+}
+
+/* Estilo para as imagens */
+.image {
+  max-width: 200px; /* Define a largura máxima da imagem como 200px */
+  border-radius: 10px; /* Adiciona bordas arredondadas de 10px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil à imagem */
+}
+
+/* Estilo para a imagem clicável */
+.clickable-image img {
+  cursor: pointer; /* Define o cursor como uma mão para indicar que a imagem é clicável */
+}
+
+/* Efeito de hover para a imagem clicável */
+.clickable-image:hover img {
+  transform: scale(1.05); /* Aumenta a imagem em 5% quando o mouse passa sobre ela */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Adiciona um efeito de brilho dourado à imagem ao passar o mouse */
+}
+
+/* Estilo para a imagem não clicável */
+.non-clickable {
+  cursor: default; /* Define o cursor como o padrão (seta) para indicar que a imagem não é clicável */
+  opacity: 0.6; /* Define a opacidade da imagem como 60% para indicar que não é clicável */
+}
+
+/* Estilo para o contêiner do formulário, inicialmente oculto */
+#input-container.hidden {
+  display: none; /* Oculta o contêiner definindo o display como none */
+}
+
+#input-container {
+  margin-left: 20px; /* Adiciona uma margem à esquerda de 20px */
+}
+
+/* Estilo para o campo de entrada de texto */
+#word-input {
+  padding: 10px; /* Adiciona um preenchimento interno de 10px */
+  font-size: 16px; /* Define o tamanho da fonte como 16px */
+  border-radius: 5px; /* Adiciona bordas arredondadas de 5px */
+  border: 1px solid #ccc; /* Define uma borda cinza clara ao redor do campo de texto */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+}
+
+/* Estilo para os botões */
+button {
+  padding: 10px 20px; /* Adiciona um preenchimento interno de 10px no topo e na base, e 20px nas laterais */
+  background-color: #4a90e2; /* Define a cor de fundo como azul */
+  color: white; /* Define a cor do texto como branca */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Adiciona bordas arredondadas de 5px */
+  font-size: 16px; /* Define o tamanho da fonte como 16px */
+  cursor: pointer; /* Define o cursor como uma mão para indicar que o botão é clicável */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança da cor de fundo */
+}
+
+/* Efeito de hover para os botões */
+button:hover {
+  background-color: #357ABD; /* Altera a cor de fundo para um tom mais escuro de azul quando o mouse passa sobre o botão */
+}
+
+/* O botão de próximo nível também começa oculto */
+#next-level.hidden {
+  display: none; /* Oculta o botão definindo o display como none */
+}
+
+#next-level {
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .game-area {
+    flex-direction: column; /* Alinha as imagens em coluna em vez de linha para telas menores */
+    text-align: center; /* Centraliza o texto dentro da área do jogo */
+  }
+
+  .image-container {
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px às imagens em telas menores */
+  }
+
+  #input-container {
+    margin-left: 0; /* Remove a margem à esquerda do contêiner do formulário em telas menores */
+  }
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Começa invisível */
+  }
+  to {
+    opacity: 1; /* Termina visível */
+  }
+}

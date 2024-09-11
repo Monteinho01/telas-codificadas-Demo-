@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo - Find the Word</title>
+  <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Find the Word!</h1> <!-- Título principal do jogo -->
+
+    <div class="game-area">
+      <!-- Contêiner para imagens do jogo -->
+      
+      <div class="image-container">
+        <!-- Contêiner específico para a imagem clicável -->
+    
+        <!-- Link para o contêiner do formulário (quando clicado, rola para o formulário) -->
+        <a href="#input-container" class="clickable-image" id="clickable-image">
+          <!-- Imagem clicável que, quando clicada, exibe o formulário -->
+          <img src="/Imagens/teste.jpg" alt="Imagem Clicável" class="image"> <!-- Imagem que pode ser clicada -->
+        </a>
+      </div>
+    </div>    
+
+      <!-- Imagem Não Clicável -->
+      <div class="image-container">
+        <img src="/Imagens/teste_copy.jpg" alt="Imagem Não Clicável" class="image non-clickable"> <!-- Imagem que não pode ser clicada -->
+      </div>
+
+      <!-- Formulário de Inserção de Palavra -->
+      <div id="input-container" class="hidden">
+        <form id="word-form">
+          <input type="text" name="word" id="word-input" placeholder="Digite a palavra..." required> <!-- Campo de texto para o usuário digitar a palavra -->
+          <button type="submit">Verificar</button> <!-- Botão para submeter o formulário -->
+        </form>
+        <!-- Botão de Próximo Nível (inicialmente oculto) -->
+        <div id="next-level" class="hidden">
+          <a href="/Concluir nivel/concluir.html"><button>Avançar para o próximo nível</button></a> <!-- Link para avançar para o próximo nível -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Desabilitar clique na imagem após o primeiro clique
+    document.getElementById('clickable-image').addEventListener('click', function(event) {
+      event.preventDefault(); // Impede o comportamento padrão do link (navegar para o destino do link)
+      this.style.pointerEvents = 'none'; // Desativa o clique na imagem após ser clicada
+      document.getElementById('input-container').classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o campo de texto
+    });
+
+    // Verificar a palavra e mostrar o botão de próximo nível
+    document.getElementById('word-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+      var inputWord = document.getElementById('word-input').value.trim().toLowerCase(); // Obtém o valor do campo de texto, removendo espaços extras e convertendo para minúsculas
+      
+      // Verifica se a palavra inserida está correta (altere "apple" para a palavra correta)
+      if (inputWord === 'apple') {
+        document.getElementById('next-level').classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o botão de próximo nível
+      } else {
+        alert('Palavra incorreta, tente novamente!'); // Mostra um alerta se a palavra estiver incorreta
+      }
+    });
+  </script>
+</body>
+</html>
+

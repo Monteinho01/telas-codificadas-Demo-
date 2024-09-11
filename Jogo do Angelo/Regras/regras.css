@@ -1,0 +1,51 @@
+/* Reseta margens, preenchimentos e configura o box-sizing globalmente */
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove preenchimentos padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo da largura e altura dos elementos */
+}
+
+/* Estiliza o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão para a página */
+  background-color: #f4f4f9; /* Define uma cor de fundo clara e suave para o corpo da página */
+  color: #333; /* Define a cor do texto para um tom escuro, melhorando a legibilidade */
+  display: flex; /* Usa Flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+}
+
+/* Estiliza o container geral */
+.container {
+  background-color: white; /* Define a cor de fundo do container como branco */
+  padding: 20px; /* Adiciona preenchimento interno de 20px ao redor do conteúdo do container */
+  border-radius: 8px; /* Adiciona bordas arredondadas de 8px ao container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao container para criar um efeito de elevação */
+  max-width: 600px; /* Define a largura máxima do container como 600px */
+}
+
+/* Estiliza o título principal */
+h1 {
+  text-align: center; /* Centraliza o texto do título */
+  color: #4a90e2; /* Define a cor do título principal como azul */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px ao título para separá-lo do conteúdo abaixo */
+}
+
+/* Estiliza os subtítulos dentro das regras */
+.rule h2 {
+  color: #333; /* Define a cor dos subtítulos como um tom escuro de cinza */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px aos subtítulos para separá-los dos parágrafos abaixo */
+}
+
+/* Estiliza os parágrafos dentro das regras */
+.rule p {
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px aos parágrafos para separá-los uns dos outros */
+  line-height: 1.6; /* Define a altura da linha para 1.6, melhorando a legibilidade do texto */
+  color: #555; /* Define a cor do texto dos parágrafos como um tom mais claro de cinza para uma leitura mais confortável */
+}
+
+/* Adiciona uma margem inferior às seções de regras */
+.rule {
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px a cada bloco de regra para separá-los visualmente */
+}
